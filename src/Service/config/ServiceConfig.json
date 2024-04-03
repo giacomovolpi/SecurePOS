@@ -1,0 +1,17 @@
+{
+  "messaging_system" : {
+    "ip" : "127.0.0.1",
+    "port" : 6000,
+    "endpoint": "/messaging_system"
+  },
+  "performance_sampler" : {
+    "ip": "127.0.0.1",
+    "port": 6000,
+    "endpoint": "/performance_sampler"
+  },
+  "client" : {
+    "ip": "127.0.0.1",
+    "port": 6001,
+    "endpoint": "/client"
+  }
+}

@@ -1,0 +1,36 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "server_port": {
+            "type": "integer",
+            "minimum": 1024
+        },
+        "monitoring_window": {
+            "type": "integer",
+            "minimum": 1
+        },
+        "evaluation_window": {
+            "type": "integer",
+            "minimum": 1
+        },
+        "client_url": {
+            "type": "string",
+            "format": "uri"
+        },
+        "evaluation_url": {
+            "type": "string",
+            "format": "uri"
+        },
+        "phase": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "monitoring_window",
+        "evaluation_window",
+        "client_url",
+        "evaluation_url",
+        "phase"
+    ]
+}
