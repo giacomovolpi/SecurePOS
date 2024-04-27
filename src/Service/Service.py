@@ -2,6 +2,7 @@ import json
 import math
 import os
 import time
+import sys
 from threading import Thread
 
 import pandas as pd
@@ -102,8 +103,7 @@ class Service:
         return {"status": "ok"}
 
     def load_data(self):
-        csv_files = [f for f in os.listdir(
-            'input_samples') if f.endswith('.csv')]
+        csv_files = [f for f in os.listdir(f'{os.path.dirname(__file__)}/input_samples') if f.endswith('.csv')]
         pandas_dfs = [pd.read_csv(
             f'{os.path.dirname(__file__)}/input_samples/{f}') for f in csv_files]
         self.df = pd.concat(pandas_dfs)
@@ -309,7 +309,7 @@ def wait_and_dump_perf_metrics():
 
 if __name__ == '__main__':
     service: Service = None
-    if input("Run in development mode? (y/n): ").lower() == 'y':
+    if sys.argv[1] == 'DEVELOPMENT':
         test_development()
     else:
         test_production()

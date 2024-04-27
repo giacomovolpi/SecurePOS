@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Specify the directory where your .db files are located
-db_directory="."
+db_directory="db"
 
 # Iterate over each .db file in the directory
 for db_file in "$db_directory"/*.db; do
