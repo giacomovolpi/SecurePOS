@@ -1,0 +1,5 @@
+services:
+    sse_project:
+        build: 
+            dockerfile: Dockerfile
+        stdin_open: true

@@ -5,8 +5,7 @@
 ## Getting started
 
 ```console
-docker build -t sse_project .
-docker run -i sse_project
+docker-compose up
 ```
 
 ## Credits of the project
